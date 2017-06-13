@@ -82,6 +82,13 @@ y = cy + lengthdir_y(r, theta);
 
 //Angle the sprite correctly
 image_angle = point_direction(cx, cy, x, y) - 90;
+
+//Destroy once the player has moves past the planet
+if(x &lt; 0) {
+
+    instance_destroy();
+
+}
 </string>
           </argument>
         </arguments>
