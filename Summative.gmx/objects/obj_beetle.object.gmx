@@ -59,17 +59,20 @@ cx = planet.x;
 cy = planet.y;
 r = planet.radius;
 
-//Alter angle based on direction
-if(sprite_index == spr_enemyL) {
+//Alter angle based on direction and if not transitioning
+if(obj_player.transition == 32) {
+
+    if(sprite_index == spr_enemyL) {
+        
+        theta += theta_speed;
     
-    theta += theta_speed;
-
-} else {
-
-    theta -= theta_speed
+    } else {
+    
+        theta -= theta_speed
+    
+    }
 
 }
-
 //Loop back around to 0
 if (theta &gt;= 360) theta -= 360;
 
